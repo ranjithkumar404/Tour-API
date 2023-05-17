@@ -15,7 +15,7 @@ const Tours = ({ id, name, info, image, price,remove }) => {
                   <p className='bg-green-400 p-1 text-green-900 rounded-md'>${price}</p>
               </div>
               <p>{r ? info : `${info.substring(0, 200)}... `}<button className='text-lime-500' onClick={() => setr(!r)}> {r ? ' show less' : ' read more'}</button></p>
-              <button onClick={()=>remove(id)} className='bg-red-500 rounded-md p-1 text-lg font-semibold'>Not interested</button>
+              <button onClick={() => remove(id)} className='bg-red-500 rounded-md p-1 text-lg font-semibold'>Not interested</button>
 
           </div>
     </div>
