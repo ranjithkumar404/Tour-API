@@ -25,7 +25,7 @@ function App() {
   }, [])
   return (
     <div className='flex justify-center items-center' >
-      {loading ? <p>Loading...</p> : <Tour tours={tours}/>}
+      {loading ? <p>Loading...</p> : <Tour tour={tours}/>}
     </div>
   );
 }

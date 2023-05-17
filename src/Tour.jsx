@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import Tours from './Tours'
-const Tour = ({ tours }) => {
+const Tour = ({ tour }) => {
     return (
         <div>
+            <p>Tours</p>
             {
-                tours.map((i) => {
-                    const { id, name, info, image, price } = i;
+                tour.map((i) => {
+                   
                     return (
-                        <Tours key={id} {...tours}/>
+                        <Tours key={i.id} {...i} />
                     )
 
 
