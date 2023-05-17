@@ -8,6 +8,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const url = 'https://course-api.com/react-tours-project';
   const [tours, setTours] = useState([]);
+
   const myFn = async () => {
     try {
       setLoading(true);
@@ -23,9 +24,14 @@ function App() {
   useEffect(() => {
     myFn();
   }, [])
+  const remove = (id) => {
+    const x = tours.filter((a) => a.id !== id)
+    setTours(x);
+   
+  };
   return (
     <div className='flex justify-center items-center' >
-      {loading ? <p>Loading...</p> : <Tour tour={tours}/>}
+      {loading ? <p>Loading...</p> : <Tour tour={tours} remove={remove} />}
     </div>
   );
 }
